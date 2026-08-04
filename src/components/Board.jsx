@@ -4,6 +4,7 @@ import Column from './Column'
 import TaskForm from '../UI/TaskForm'
 import useGuest from '../hooks/useGuest'
 import useTasks from '../hooks/useTasks'
+import LoadingCard from '../UI/LoadingCard'
 
 const COLUMNS = [
     {id: "todo", title: "To Do"},
@@ -19,7 +20,7 @@ function Board() {
     const [editingTask, setEditingTask] = useState(null)
 
     if(guestLoading || tasksLoading){
-        return <p>Loading...</p>
+        return <LoadingCard />
     }
     if(error) {
         return <p>Error: {error}</p>

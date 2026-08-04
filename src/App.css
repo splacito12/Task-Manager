@@ -303,3 +303,63 @@ body {
     resize: vertical;
     font-size: 15px;
 }
+
+/* Loading Card*/
+.loading-card {
+    display: flex;
+    gap: 12px;
+    background: transparent;
+    padding: 24px 32px;
+}
+
+.col-skeleton {
+    background: #4a4a4b;
+    border-radius: 8px;
+    padding: 16px;
+    flex: 1;
+    min-width: 250px;
+}
+
+.skeleton-line {
+    background: linear-gradient(to right, #6b6b6d 4%, #8c8c8e 25%, #6b6b6d 36%);
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
+    border-radius: 4px;
+}
+
+.skeleton-title {
+    width: 60%;
+    height: 20px;
+    margin-bottom: 8px;
+}
+
+.skeleton-line-wide {
+    width: 80%;
+    margin-bottom: 8px;
+    height: 16px;
+}
+
+.skeleton-line-narrow {
+    width: 40%;
+    margin-bottom: 8px;
+    height: 16px;
+}
+
+.skeleton-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    cursor: progress;
+    gap: 6px;
+    background: #3f3f41;
+    padding: 8px;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
